@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --accent-color: #2294ed;
+            --accent-color-dark: #1d69a3;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 73.75rem;
+            margin-inline: auto;
+            overflow: hidden;
+        }
+
+        .hover-link:hover {
+            color: #48a6ff;
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #f3faff;
+            box-shadow: 0 0.1rem 0.35rem #bbd0e2;
+            position: fixed;
+            top: 0;
+            z-index: 99;
+            left: 0;
+            right: 0;
+        }
+
+        .main-nav {
+            justify-content: space-around;
+            padding-block: 0.5rem;
+            padding-inline: 0.3rem;
+        }
+
+        .company-logo img {
+            height: 3.75rem;
+        }
+
+        .nav-links {
+            flex-grow: 1;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-evenly;
+        }
+
+        .nav-links li {
+            color: var(--primary-text-color);
+        }
+
+        .search-bar {
+            height: 2rem;
+            gap: 0.5rem;
+            justify-content: flex-end;
+        }
+
+        .news-input {
+            width: 10.5rem;
+            height: 100%; 
+            padding-inline: 0.75rem;
+            border-radius: 0.25rem;
+            border: 0.125rem solid #bbd0e2;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+        }
+
+        .search-button {
+            height: 100%;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+        }
+
+        .search-button:hover {
+            background: var(--accent-color-dark);
+        }
+
+        body {
+            padding-top: 6rem;
+        }
+
+        .gallery-item {
+            display: flex;
+            margin: 2rem 0;
+            gap: 2rem;
+        }
+
+        .gallery-item img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            border: 10px #48a6ff solid;
+            border-radius: 10%;
+            flex: 1; 
+        }
+
+        .text-content {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .paragraph {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<header>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" src="" onclick='reload()' class="company-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKFQyHxStMXWsoD_U6FL3gpdQbKm92qkjBA&s"> 
+            </a>
+    
+            <div class="nav-links">
+                <ul class="flex">
+                    <a href="">LOGIN</a>
+                    <a href="">SIGNUP</a>
+                    <a href="gallery.html">GALLERY</a>
+                    <!-- <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">login</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">signup</li>
+                    <li class="hover-link nav-item" id="Global" onclick="onNavItemClick('Global')">Gallery</li> -->
+                    <!-- <li class="hover-link nav-item" id="Sports" onclick="onNavItemClick('Sports')"></li> -->
+                </ul>
+            </div>
+    
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="Search here">
+                <button id="search-button" class="search-button flex"><span>Search</span></button>
+            </div>
+        </div>  
+    </nav> 
+</header>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/12/550x309/PM_Modi_and_Amit_Shah_1720783400960_1720783401128.jpg" alt="">
+            <div class="text-content">
+                <div class="para">
+                    <h3>Emergency:Centre declares June 25 as 'Samvidhaan Hatya Diwas'
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/12/148x111/The-surge-in-prices-has-been-led-by-vegetables-suc_1702119922916_1720787358980.jpg" alt="">
+            <div class="text-content">
+                <div class="para"><h3>Retail inflation rises to 5.08 per cent in June, says govt data</h3></div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/12/148x111/anant_ambani_radhika_merchant_wedding_live_updates_1720790338836_1720790339467.png" alt="">
+            <div class="text-content">
+                <div class="para"><h3>Anant Ambani wedding live updates: Priyanka Chopra, Nick Jonas arrive in style</h3></div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/12/148x111/PTI06-02-2024-000092B-0_1720784218879_1720784248642.jpg" alt="">
+            <div class="text-content">
+                <div class="para"><h3>Congress's first reaction to Centre's Emergency move: 'June 4 Modi-Mukti Diwas'</h3></div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/12/148x111/students-queue-santacruz-sunday-enter-centre-neet_8e21ee6e-25f1-11e9-a405-f80f48f5557a_1720792249313.jpg" alt="">
+            <div class="text-content">
+                <div class="para"><h3>JKBOSE 11th Results 2024: Students, parents irked by delay in Class 11 results</h3></div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/12/150x84/West-Bengal-chief-minister-Mamata-Banerjee--File-P_1720792438481.jpg" alt="">
+            <div class="text-content">
+                <div class="para"><h3>NDA govt unstable, may not complete its term: Mamata Banerjee</h3></div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/11/550x309/Saina-nehwal-president-india-droupadi-murmu-badmin_1720691760321_1720691760638.jpg" alt="">
+            <div class="text-content">
+                <div class="para"><h3>President Droupadi Murmu plays badminton with Olympic medalist Saina Nehwal</h3></div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/12/148x111/Kim_Kardashian_and_Khloe_Kardashian_in_Mumbai_1720780955097_1720780955307.jpg" alt="">
+            <div class="text-content">
+                <div class="para"><h3>Kim K, Khloe brave Mumbai rains in an auto ahead of Radhika-Anant wedding: Watch</h3></div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/11/148x111/OLYMPICS-2024-ATHLETICS-INDIA-0_1720691809149_1720691830237.JPG" alt="">
+            <div class="text-content">
+                <div class="para"><h3>Paris Olympics: Can India better their record medal haul at Tokyo</h3></div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.hindustantimes.com/img/2024/07/12/550x309/india_womens_hockey_jio_1720785753870_1720785761152.jpg" alt="">
+            <div class="text-content">
+                <div class="para"><h3>Paris Olympics: Five big names from India who won't be at the Games in 2024</h3></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+
+<footer>
+    <center>
+        <div class="footer">
+            <div>
+                <p>
+                    CONTACT US: <br>
+                    +91 8006875810 <br>
+                    aryan0219.be23@chitkara.edu.in
+                </p>
+            </div>
+
+            <div>
+                <center>
+                    <p>
+                        All copyrights &copy; Reserverd
+                    </p>
+                </center>
+            </div>
+        </div>     
+    </center>
+</footer>
+</html>
